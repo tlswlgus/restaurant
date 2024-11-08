@@ -1,0 +1,17 @@
+C:\Users\jihye\source\repos\Restaurant\Restaurant\bin\Debug\net8.0-windows\Restaurant.exe
+C:\Users\jihye\source\repos\Restaurant\Restaurant\bin\Debug\net8.0-windows\Restaurant.deps.json
+C:\Users\jihye\source\repos\Restaurant\Restaurant\bin\Debug\net8.0-windows\Restaurant.runtimeconfig.json
+C:\Users\jihye\source\repos\Restaurant\Restaurant\bin\Debug\net8.0-windows\Restaurant.dll
+C:\Users\jihye\source\repos\Restaurant\Restaurant\bin\Debug\net8.0-windows\Restaurant.pdb
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\Restaurant.Form1.resources
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\Restaurant.csproj.GenerateResource.cache
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\Restaurant.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\Restaurant.AssemblyInfoInputs.cache
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\Restaurant.AssemblyInfo.cs
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\Restaurant.csproj.CoreCompileInputs.cache
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\Restaurant.dll
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\refint\Restaurant.dll
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\Restaurant.pdb
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\Restaurant.genruntimeconfig.cache
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\ref\Restaurant.dll
+C:\Users\jihye\source\repos\Restaurant\Restaurant\obj\Debug\net8.0-windows\Restaurant.Properties.Resources.resources
