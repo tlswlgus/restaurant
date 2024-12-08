@@ -13,6 +13,7 @@ namespace RestaurantSystem.UI
     public partial class Launch : Form
     {
         Boolean dineIn;
+        int outerBorder = 35;
         public Launch()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace RestaurantSystem.UI
         {
             int penSize = 15;
             Pen pen = new Pen(Color.FromArgb(194, 152, 61), penSize);
-            int outerBorder = 35;
+            
             
             //Top Border
             Point startPoint = new Point(outerBorder, outerBorder + 7);
@@ -75,6 +76,12 @@ namespace RestaurantSystem.UI
 
             btnDine.Left = (pnlClick.Size.Width - btnDine.Size.Width) / 2;
             btnTake.Left = (pnlClick.Size.Width - btnTake.Size.Width) / 2;
+
+            picBGStart.Height = Convert.ToInt32(this.Height * 0.5) - 8;
+            picBGStart.Width = this.Width;
+            picBGStart.MaximumSize = new Size((picBGStart.Size.Width - (outerBorder * 2) - 15), picBGStart.Height);
+            picBGStart.Left = (this.Size.Width - picBGStart.Size.Width) / 2 + 1;
+            picBGStart.Top = (this.Size.Height - picBGStart.Size.Height) / 2 + 1;
         }
 
         private void pnlClick_Paint(object sender, PaintEventArgs e)

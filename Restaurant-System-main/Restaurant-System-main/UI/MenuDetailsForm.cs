@@ -38,6 +38,13 @@ namespace RestaurantSystem.UI
             get => listIngredients.Text;
             set => listIngredients.Text = value;
         }
+
+        public Image ItemImage
+        {
+           get => itemImage.Image;
+           set => itemImage.Image = value;
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();

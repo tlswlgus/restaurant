@@ -1,5 +1,9 @@
 ﻿using RestaurantSystem.Data;
 using RestaurantSystem.UI;
+using RestaurantSystem.Utilities;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 using MenuItem = RestaurantSystem.Models.MenuItem;
 
 
@@ -22,7 +26,8 @@ namespace RestaurantSystem.Handler
             _menuDetailsForm.ItemNameDetails = item.Name;
             _menuDetailsForm.ItemDescriptionDetails = item.LongDescription;
             _menuDetailsForm.ItemPriceDetails = item.Price;
-            //_menuDetailsForm.ItemImage = ImageHelper.ByteArrayToImage(item.Image);
+            _menuDetailsForm.ItemListIngredientsDetails = item.ListIngredients;
+            _menuDetailsForm.ItemImage = ImageHelper.ByteArrayToImage(item.Image);
 
         }
     }

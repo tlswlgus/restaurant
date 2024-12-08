@@ -41,18 +41,18 @@
             this.orderPreferences = new System.Windows.Forms.Button();
             this.orderReset = new System.Windows.Forms.Button();
             this.pnlDetailRight = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.itemIngredients = new System.Windows.Forms.Label();
             this.btnPlus = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
-            this.pictureBoxDetails = new System.Windows.Forms.PictureBox();
+            this.itemImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.pnlDetailRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemImage)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -80,7 +80,7 @@
             this.itemDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.itemDescription.Name = "itemDescription";
             this.itemDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.itemDescription.Size = new System.Drawing.Size(368, 230);
+            this.itemDescription.Size = new System.Drawing.Size(368, 239);
             this.itemDescription.TabIndex = 3;
             this.itemDescription.Text = resources.GetString("itemDescription.Text");
             this.itemDescription.Click += new System.EventHandler(this.itemDescription_Click);
@@ -89,7 +89,7 @@
             // 
             this.listIngredients.Font = new System.Drawing.Font("Georgia", 12F);
             this.listIngredients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(207)))), ((int)(((byte)(196)))));
-            this.listIngredients.Location = new System.Drawing.Point(14, 347);
+            this.listIngredients.Location = new System.Drawing.Point(14, 354);
             this.listIngredients.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.listIngredients.Name = "listIngredients";
             this.listIngredients.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -217,12 +217,22 @@
             this.pnlDetailRight.TabIndex = 5;
             this.pnlDetailRight.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDetailRight_Paint);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RestaurantSystem.Properties.Resources.lblIngredients_Image;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 301);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // itemIngredients
             // 
             this.itemIngredients.AutoSize = true;
             this.itemIngredients.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemIngredients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(152)))), ((int)(((byte)(61)))));
-            this.itemIngredients.Location = new System.Drawing.Point(67, 311);
+            this.itemIngredients.Location = new System.Drawing.Point(67, 318);
             this.itemIngredients.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.itemIngredients.Name = "itemIngredients";
             this.itemIngredients.Size = new System.Drawing.Size(146, 25);
@@ -285,16 +295,6 @@
             this.lblQuantity.Text = "0";
             this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RestaurantSystem.Properties.Resources.lblIngredients_Image;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 294);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnBack
             // 
             this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(152)))), ((int)(((byte)(61)))));
@@ -314,16 +314,16 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // pictureBoxDetails
+            // itemImage
             // 
-            this.pictureBoxDetails.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDetails.Image")));
-            this.pictureBoxDetails.Location = new System.Drawing.Point(11, 17);
-            this.pictureBoxDetails.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxDetails.Name = "pictureBoxDetails";
-            this.pictureBoxDetails.Size = new System.Drawing.Size(350, 350);
-            this.pictureBoxDetails.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxDetails.TabIndex = 0;
-            this.pictureBoxDetails.TabStop = false;
+            this.itemImage.Image = ((System.Drawing.Image)(resources.GetObject("itemImage.Image")));
+            this.itemImage.Location = new System.Drawing.Point(11, 17);
+            this.itemImage.Margin = new System.Windows.Forms.Padding(2);
+            this.itemImage.Name = "itemImage";
+            this.itemImage.Size = new System.Drawing.Size(350, 350);
+            this.itemImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.itemImage.TabIndex = 0;
+            this.itemImage.TabStop = false;
             // 
             // MenuDetailsForm
             // 
@@ -345,7 +345,7 @@
             this.Controls.Add(this.orderToppings);
             this.Controls.Add(this.orderSides);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.pictureBoxDetails);
+            this.Controls.Add(this.itemImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuDetailsForm";
@@ -357,7 +357,7 @@
             this.pnlDetailRight.ResumeLayout(false);
             this.pnlDetailRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,7 +366,7 @@
         #endregion
 
         private System.IO.FileSystemWatcher fileSystemWatcher1;
-        private System.Windows.Forms.PictureBox pictureBoxDetails;
+        private System.Windows.Forms.PictureBox itemImage;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label itemDescription;
         private System.Windows.Forms.Label itemName;

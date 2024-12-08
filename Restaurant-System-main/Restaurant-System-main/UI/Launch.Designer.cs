@@ -30,16 +30,18 @@
         {
             this.pnlLabel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlClick = new System.Windows.Forms.Panel();
-            this.lblStart = new System.Windows.Forms.Label();
-            this.picStart = new System.Windows.Forms.PictureBox();
-            this.btnDine = new System.Windows.Forms.Button();
             this.btnTake = new System.Windows.Forms.Button();
+            this.btnDine = new System.Windows.Forms.Button();
+            this.lblStart = new System.Windows.Forms.Label();
+            this.picBGStart = new System.Windows.Forms.PictureBox();
+            this.picStart = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlLabel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlClick.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBGStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLabel
@@ -63,16 +65,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Leannè de Fontaine";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RestaurantSystem.Properties.Resources.restaurant_logo_transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(175, 175);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnlClick
             // 
             this.pnlClick.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(207)))), ((int)(((byte)(196)))));
@@ -86,32 +78,20 @@
             this.pnlClick.TabIndex = 2;
             this.pnlClick.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClick_Paint);
             // 
-            // lblStart
+            // btnTake
             // 
-            this.lblStart.AutoSize = true;
-            this.lblStart.Font = new System.Drawing.Font("Georgia", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStart.ForeColor = System.Drawing.Color.Black;
-            this.lblStart.Location = new System.Drawing.Point(10, 145);
-            this.lblStart.Margin = new System.Windows.Forms.Padding(10);
-            this.lblStart.MaximumSize = new System.Drawing.Size(400, 0);
-            this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(382, 98);
-            this.lblStart.TabIndex = 1;
-            this.lblStart.Text = "Where will you be eating today?";
-            this.lblStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // picStart
-            // 
-            this.picStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-            this.picStart.Image = global::RestaurantSystem.Properties.Resources.picSpoon_Image;
-            this.picStart.Location = new System.Drawing.Point(0, 20);
-            this.picStart.Margin = new System.Windows.Forms.Padding(10);
-            this.picStart.Name = "picStart";
-            this.picStart.Padding = new System.Windows.Forms.Padding(10);
-            this.picStart.Size = new System.Drawing.Size(97, 100);
-            this.picStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picStart.TabIndex = 0;
-            this.picStart.TabStop = false;
+            this.btnTake.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+            this.btnTake.FlatAppearance.BorderSize = 3;
+            this.btnTake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTake.Font = new System.Drawing.Font("Georgia", 27.75F, System.Drawing.FontStyle.Bold);
+            this.btnTake.Location = new System.Drawing.Point(0, 377);
+            this.btnTake.Margin = new System.Windows.Forms.Padding(5, 5, 5, 15);
+            this.btnTake.Name = "btnTake";
+            this.btnTake.Size = new System.Drawing.Size(215, 70);
+            this.btnTake.TabIndex = 3;
+            this.btnTake.Text = "Take-Out";
+            this.btnTake.UseVisualStyleBackColor = false;
+            this.btnTake.Click += new System.EventHandler(this.btnTake_Click);
             // 
             // btnDine
             // 
@@ -129,20 +109,52 @@
             this.btnDine.UseVisualStyleBackColor = false;
             this.btnDine.Click += new System.EventHandler(this.btnDine_Click);
             // 
-            // btnTake
+            // lblStart
             // 
-            this.btnTake.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
-            this.btnTake.FlatAppearance.BorderSize = 3;
-            this.btnTake.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTake.Font = new System.Drawing.Font("Georgia", 27.75F, System.Drawing.FontStyle.Bold);
-            this.btnTake.Location = new System.Drawing.Point(0, 377);
-            this.btnTake.Margin = new System.Windows.Forms.Padding(5, 5, 5, 15);
-            this.btnTake.Name = "btnTake";
-            this.btnTake.Size = new System.Drawing.Size(215, 70);
-            this.btnTake.TabIndex = 3;
-            this.btnTake.Text = "Take-Out";
-            this.btnTake.UseVisualStyleBackColor = false;
-            this.btnTake.Click += new System.EventHandler(this.btnTake_Click);
+            this.lblStart.AutoSize = true;
+            this.lblStart.Font = new System.Drawing.Font("Georgia", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStart.ForeColor = System.Drawing.Color.Black;
+            this.lblStart.Location = new System.Drawing.Point(10, 145);
+            this.lblStart.Margin = new System.Windows.Forms.Padding(10);
+            this.lblStart.MaximumSize = new System.Drawing.Size(400, 0);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(382, 98);
+            this.lblStart.TabIndex = 1;
+            this.lblStart.Text = "Where will you be eating today?";
+            this.lblStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picBGStart
+            // 
+            this.picBGStart.Image = global::RestaurantSystem.Properties.Resources.ImageStart;
+            this.picBGStart.Location = new System.Drawing.Point(351, 252);
+            this.picBGStart.Name = "picBGStart";
+            this.picBGStart.Size = new System.Drawing.Size(518, 330);
+            this.picBGStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBGStart.TabIndex = 3;
+            this.picBGStart.TabStop = false;
+            // 
+            // picStart
+            // 
+            this.picStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+            this.picStart.Image = global::RestaurantSystem.Properties.Resources.picSpoon_Image;
+            this.picStart.Location = new System.Drawing.Point(0, 20);
+            this.picStart.Margin = new System.Windows.Forms.Padding(10);
+            this.picStart.Name = "picStart";
+            this.picStart.Padding = new System.Windows.Forms.Padding(10);
+            this.picStart.Size = new System.Drawing.Size(97, 100);
+            this.picStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picStart.TabIndex = 0;
+            this.picStart.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RestaurantSystem.Properties.Resources.restaurant_logo_transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(175, 175);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Launch
             // 
@@ -152,6 +164,7 @@
             this.ClientSize = new System.Drawing.Size(936, 817);
             this.Controls.Add(this.pnlClick);
             this.Controls.Add(this.pnlLabel);
+            this.Controls.Add(this.picBGStart);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(152)))), ((int)(((byte)(61)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Launch";
@@ -161,10 +174,11 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Launch_Paint);
             this.pnlLabel.ResumeLayout(false);
             this.pnlLabel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlClick.ResumeLayout(false);
             this.pnlClick.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBGStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -179,5 +193,6 @@
         private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.Button btnDine;
         private System.Windows.Forms.Button btnTake;
+        private System.Windows.Forms.PictureBox picBGStart;
     }
 }

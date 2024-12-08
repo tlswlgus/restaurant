@@ -8,6 +8,7 @@
         public string LongDescription{ get; set; }
         public decimal Price{ get; set; }
         public string Category{ get; set; }
+        public string ListIngredients { get; set; }
         public byte[] Image{ get; set; }
     }
 }

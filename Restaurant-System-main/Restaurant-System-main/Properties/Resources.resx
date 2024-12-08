@@ -121,17 +121,20 @@
   <data name="btnBeverages_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnBeverages_Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblIngredients_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lblIngredients_Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnAppetizer_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnAppetizer_Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lblIngredients_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lblIngredients_Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnAll_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnAll_Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="picSpoon_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picSpoon_Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Test" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Test.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,7 +148,7 @@
   <data name="btnMainCourse_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnMainCourse_Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="picSpoon_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\picSpoon_Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImageStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImageStart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

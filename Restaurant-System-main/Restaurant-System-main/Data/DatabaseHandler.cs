@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Xml;
 using RestaurantSystem.Models;
 
 
@@ -34,6 +35,7 @@ namespace RestaurantSystem.Data
                             Category = reader["Category"].ToString(),
                             Image = reader["Image"] as byte[],
                             LongDescription = reader["LDescription"].ToString(),
+                            ListIngredients = reader["Ingredients"].ToString(),
                         });
                     }
                 }
