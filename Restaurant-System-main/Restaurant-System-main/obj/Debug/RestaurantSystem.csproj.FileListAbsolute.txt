@@ -25,3 +25,18 @@ C:\Users\jihye\OneDrive\Documents\Restaurant-System-main\Restaurant-System-main\
 C:\Users\jihye\OneDrive\Documents\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.exe
 C:\Users\jihye\OneDrive\Documents\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.pdb
 C:\Users\jihye\OneDrive\Documents\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.Launch.resources
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\bin\Debug\RestaurantSystem.exe.config
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\bin\Debug\RestaurantSystem.exe
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\bin\Debug\RestaurantSystem.pdb
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.csproj.AssemblyReference.cache
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.CategoryButtonControl.resources
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.Launch.resources
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.MenuDetailsForm.resources
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.MenuItemControl.resources
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.MainForm.resources
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.Properties.Resources.resources
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.csproj.GenerateResource.cache
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.csproj.CoreCompileInputs.cache
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.exe
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.pdb
+C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.OrderDetailsControl.resources

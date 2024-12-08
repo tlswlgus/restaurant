@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|c:\\users\\jayvee hermoso\\source\\repos\\pbl project\\restaurant 2.0\\restaurant\\restaurant-system-main\\restaurant-system-main\\handler\\menueventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\handler\\menueventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\restaurant-system-main\\ui\\menudetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\ui\\menudetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|c:\\users\\jayvee hermoso\\source\\repos\\pbl project\\restaurant 2.0\\restaurant\\restaurant-system-main\\restaurant-system-main\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|c:\\users\\jayvee hermoso\\source\\repos\\pbl project\\restaurant 2.0\\restaurant\\restaurant-system-main\\restaurant-system-main\\ui\\orderdetailscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\ui\\orderdetailscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|c:\\users\\jayvee hermoso\\source\\repos\\pbl project\\restaurant 2.0\\restaurant\\restaurant-system-main\\restaurant-system-main\\data\\databasehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\data\\databasehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\restaurant-system-main\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|c:\\users\\jayvee hermoso\\source\\repos\\pbl project\\restaurant 2.0\\restaurant\\restaurant-system-main\\restaurant-system-main\\ui\\launch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\ui\\launch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|c:\\users\\jayvee hermoso\\source\\repos\\pbl project\\restaurant 2.0\\restaurant\\restaurant-system-main\\restaurant-system-main\\ui\\menudetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\ui\\menudetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|c:\\users\\jayvee hermoso\\source\\repos\\pbl project\\restaurant 2.0\\restaurant\\restaurant-system-main\\restaurant-system-main\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\restaurant-system-main\\ui\\orderdetailscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\ui\\orderdetailscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|c:\\users\\jayvee hermoso\\source\\repos\\pbl project\\restaurant 2.0\\restaurant\\restaurant-system-main\\restaurant-system-main\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{019969E2-E5BD-470F-AF3E-A556A77321DB}|Restaurant-System-main\\RestaurantSystem.csproj|solutionrelative:restaurant-system-main\\ui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 273,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\MainForm.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\UI\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\MainForm.cs",
+              "RelativeToolTip": "Restaurant-System-main\\UI\\MainForm.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAqwIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T07:58:17.132Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DatabaseHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\Data\\DatabaseHandler.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\Data\\DatabaseHandler.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\Data\\DatabaseHandler.cs",
+              "RelativeToolTip": "Restaurant-System-main\\Data\\DatabaseHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T14:55:21.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MenuEventHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\Handler\\MenuEventHandler.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\Handler\\MenuEventHandler.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\Handler\\MenuEventHandler.cs",
+              "RelativeToolTip": "Restaurant-System-main\\Handler\\MenuEventHandler.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAYwFYAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T14:55:18.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Launch.cs",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\Launch.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\UI\\Launch.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\Launch.cs",
+              "RelativeToolTip": "Restaurant-System-main\\UI\\Launch.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T14:42:12.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\Models\\OrderItem.cs",
+              "RelativeToolTip": "Restaurant-System-main\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T14:37:10.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderDetailsControl.cs",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\OrderDetailsControl.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\UI\\OrderDetailsControl.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\OrderDetailsControl.cs",
+              "RelativeToolTip": "Restaurant-System-main\\UI\\OrderDetailsControl.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswCAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T14:18:40.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MenuItem.cs",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\Models\\MenuItem.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\Models\\MenuItem.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\Models\\MenuItem.cs",
+              "RelativeToolTip": "Restaurant-System-main\\Models\\MenuItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T14:11:15.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MenuDetailsForm.cs",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\MenuDetailsForm.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\UI\\MenuDetailsForm.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\MenuDetailsForm.cs",
+              "RelativeToolTip": "Restaurant-System-main\\UI\\MenuDetailsForm.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T07:55:18.373Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "292332be-238e-4469-8f3e-be5f9cab8d1c",
+        "Display": 0,
+        "X": 3,
+        "Y": 0,
+        "Width": 1176,
+        "Height": 821,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuDetailsForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\MenuDetailsForm.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\UI\\MenuDetailsForm.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\MenuDetailsForm.cs [Design]",
+              "RelativeToolTip": "Restaurant-System-main\\UI\\MenuDetailsForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T07:55:01.135Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderDetailsControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\OrderDetailsControl.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\UI\\OrderDetailsControl.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\OrderDetailsControl.cs [Design]",
+              "RelativeToolTip": "Restaurant-System-main\\UI\\OrderDetailsControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T08:04:14.067Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\MainForm.cs",
+              "RelativeDocumentMoniker": "Restaurant-System-main\\UI\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Jayvee Hermoso\\source\\repos\\PBL Project\\Restaurant 2.0\\restaurant\\Restaurant-System-main\\Restaurant-System-main\\UI\\MainForm.cs [Design]",
+              "RelativeToolTip": "Restaurant-System-main\\UI\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T08:15:17.876Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

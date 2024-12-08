@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using RestaurantSystem.Data;
 using RestaurantSystem.Handler;
+using RestaurantSystem.Models;
 using RestaurantSystem.UI;
 
 namespace RestaurantSystem.UI
@@ -12,13 +15,16 @@ namespace RestaurantSystem.UI
     public partial class MainForm : Form
     {
         private readonly MenuEventHandler _menuButtonHandler;
+        private List<OrderDetailsControl> orderedItemControls = new List<OrderDetailsControl>();
+
+        public FlowLayoutPanel OrderDetailsPanel => flpOrderDetails;
         public MainForm()
         {
             InitializeComponent();
-
             var databaseHandler = new DatabaseHandler();
             
-            _menuButtonHandler = new MenuEventHandler(databaseHandler, flpMenuItem);
+            _menuButtonHandler = new MenuEventHandler(databaseHandler, flpMenuItem, flpOrderDetails);
+
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -122,5 +128,6 @@ namespace RestaurantSystem.UI
         {
 
         }
+
     }
 }

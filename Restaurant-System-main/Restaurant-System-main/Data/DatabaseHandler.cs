@@ -11,7 +11,7 @@ namespace RestaurantSystem.Data
     {
         //Connection for the Database
         private readonly string _connectionString =
-            "Server=localhost\\SQLEXPRESS01;Database=RestaurantDB;Trusted_Connection=True;";
+            "Server=localhost\\SQLEXPRESS;Database=RestaurantDB;Trusted_Connection=True;";
 
         public List<MenuItem> GetMenuItems()
         {

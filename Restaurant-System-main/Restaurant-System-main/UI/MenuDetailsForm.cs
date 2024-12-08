@@ -1,5 +1,6 @@
 ﻿using RestaurantSystem.Data;
 using RestaurantSystem.Handler;
+using RestaurantSystem.Models;
 using System;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -10,10 +11,11 @@ namespace RestaurantSystem.UI
 {
     public partial class MenuDetailsForm : Form
     {
-        
-        public MenuDetailsForm()
+        private readonly Action<OrderDetailsControl> onOrder;
+        public MenuDetailsForm(Action<OrderDetailsControl> onOrder)
         {
             InitializeComponent();
+            this.onOrder = onOrder;
         } 
 
         public string ItemNameDetails
@@ -113,8 +115,28 @@ namespace RestaurantSystem.UI
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            int quantity = int.Parse(lblQuantity.Text); // Get the quantity selected by the user
+            if (quantity > 0)
+            {
+                // Create an OrderDetailsControl with the selected details
+                var orderDetailsControl = new OrderDetailsControl
+                {
+                    ItemName = ItemNameDetails,
+                    Price = ItemPriceDetails,
+                    Quantity = quantity
+                };
+                orderDetailsControl.UpdateTotalPrice();
 
+                // Invoke the callback to pass the order to the main form
+                onOrder?.Invoke(orderDetailsControl);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please select a quantity greater than 0.", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
 
         private void itemDescription_Click(object sender, EventArgs e)
         {
