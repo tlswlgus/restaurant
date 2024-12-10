@@ -62,8 +62,9 @@ namespace RestaurantSystem.Handler
                     {
                         ItemNameDetails = item.Name,
                         ItemPriceDetails = item.Price,
-                        ItemDescriptionDetails = item.ShortDescription,
+                        ItemDescriptionDetails = item.LongDescription,
                         ItemImage = ImageHelper.ByteArrayToImage(item.Image),
+                        
                         //ItemListIngredientsDetails = item.Ingredients //  Property to add
                     };
 
@@ -80,12 +81,12 @@ namespace RestaurantSystem.Handler
             var existingOrder = _orderListPanel.Controls
                 .OfType<OrderDetailsControl>()
                 .FirstOrDefault(order => order.ItemName == orderDetails.ItemName);
-
+                
             if (existingOrder != null)
             {
                 // Update the quantity and total price
                 existingOrder.Quantity += orderDetails.Quantity;
-                existingOrder.UpdateTotalPrice();
+                existingOrder.UpdateTotalPrice(false);
             }
             else
             {

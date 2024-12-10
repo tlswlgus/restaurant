@@ -40,3 +40,20 @@ C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Resta
 C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.exe
 C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.pdb
 C:\Users\Jayvee Hermoso\source\repos\PBL Project\Restaurant 2.0\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.OrderDetailsControl.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\bin\Debug\RestaurantSystem.exe.config
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\bin\Debug\RestaurantSystem.exe
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\bin\Debug\RestaurantSystem.pdb
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.csproj.AssemblyReference.cache
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.CategoryButtonControl.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.Launch.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.MenuDetailsForm.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.MenuItemControl.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.MainForm.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.Properties.Resources.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.OrderDetailsControl.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.csproj.GenerateResource.cache
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.csproj.CoreCompileInputs.cache
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.exe
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.pdb
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.Checkout.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.Not_Available.resources

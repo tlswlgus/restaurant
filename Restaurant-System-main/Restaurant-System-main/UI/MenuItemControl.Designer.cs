@@ -102,7 +102,7 @@
             this.Controls.Add(this.pictureBox);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(152)))), ((int)(((byte)(61)))));
-            this.Margin = new System.Windows.Forms.Padding(14);
+            this.Margin = new System.Windows.Forms.Padding(12);
             this.Name = "MenuItemControl";
             this.Size = new System.Drawing.Size(250, 270);
             this.Load += new System.EventHandler(this.MenuItemControl_Load);

@@ -3,9 +3,12 @@ using RestaurantSystem.Handler;
 using RestaurantSystem.Models;
 using System;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Net;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace RestaurantSystem.UI
 {
@@ -32,7 +35,7 @@ namespace RestaurantSystem.UI
         public decimal ItemPriceDetails
         {
             get => decimal.Parse(itemPriceDetails.Text.Substring(1));
-            set => itemPriceDetails.Text = $"\u20b1 {value:0.00}";
+            set => itemPriceDetails.Text = $"₱ {value:0.00}";
         }
 
         public string ItemListIngredientsDetails
@@ -47,6 +50,8 @@ namespace RestaurantSystem.UI
            set => itemImage.Image = value;
         }
 
+        int oldQuantity = 0;
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -55,6 +60,7 @@ namespace RestaurantSystem.UI
         private void MenuDetailsForm_Load(object sender, EventArgs e)
         {
             itemName.Left = (pnlDetailRight.Size.Width - itemName.Size.Width) / 2;
+
         }
 
         private void MenuDetailsForm_Paint(object sender, PaintEventArgs e)
@@ -113,19 +119,78 @@ namespace RestaurantSystem.UI
             }
         }
 
+
         private void btnOrder_Click(object sender, EventArgs e)
         {
             int quantity = int.Parse(lblQuantity.Text); // Get the quantity selected by the user
+            quantity = oldQuantity + quantity;
+            string connectionString = "Server=jihyeon\\SQLEXPRESS01;Database=RestaurantDB;Trusted_Connection=True;";
+            Console.WriteLine("Before product inserted. " + quantity + " " + oldQuantity);
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string checkQuery = "SELECT COUNT(*) FROM Orders WHERE OrderName = @OrderName";
+                    byte[] imageBytes = ImageToByteArray(ItemImage);
+                    using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection))
+                    {
+                        checkCommand.Parameters.AddWithValue("OrderName", ItemNameDetails);
+                        int count = (int)checkCommand.ExecuteScalar();
+                        if (count == 0)
+                        {
+                            // Insert new product
+                            string insertQuery = "INSERT INTO Orders (OrderName, OrderPrice, OrderImage, OrderQuantity, OrderTotal) VALUES (@OrderName, @OrderPrice, @OrderImage, @OrderQuantity, @OrderTotal)";
+                            using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
+                            {
+                                insertCommand.Parameters.AddWithValue("@OrderName", ItemNameDetails);
+                                insertCommand.Parameters.AddWithValue("@OrderPrice", ItemPriceDetails);
+                                insertCommand.Parameters.AddWithValue("@OrderImage", imageBytes);
+                                insertCommand.Parameters.AddWithValue("@OrderQuantity", quantity);
+                                insertCommand.Parameters.AddWithValue("@OrderTotal", ItemPriceDetails * quantity);
+                                insertCommand.ExecuteNonQuery();
+
+                                oldQuantity = quantity;
+                                Console.WriteLine("New product inserted. " + quantity + " " + oldQuantity);
+                            }
+                        }
+                        else
+                        {
+                            // Update existing product
+                            string updateQuery = "UPDATE Orders SET  OrderPrice = @OrderPrice, OrderImage = @OrderImage, OrderQuantity = @OrderQuantity, OrderTotal = @OrderTotal  WHERE OrderName = '" + ItemNameDetails + "'";
+                            using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
+                            {
+                                quantity = oldQuantity + quantity;
+                                updateCommand.Parameters.AddWithValue("@OrderPrice", ItemPriceDetails);
+                                updateCommand.Parameters.AddWithValue("@OrderImage", imageBytes);
+                                updateCommand.Parameters.AddWithValue("@OrderQuantity", quantity);
+                                updateCommand.Parameters.AddWithValue("@OrderTotal", ItemPriceDetails * quantity);
+                                updateCommand.ExecuteNonQuery();
+
+                                oldQuantity = quantity;
+                                Console.WriteLine("Existing product updated." + quantity + " " + oldQuantity);
+                            }
+                        }
+                    }
+
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            
             if (quantity > 0)
             {
                 // Create an OrderDetailsControl with the selected details
                 var orderDetailsControl = new OrderDetailsControl
                 {
+                    OrderImage = ItemImage,
                     ItemName = ItemNameDetails,
                     Price = ItemPriceDetails,
                     Quantity = quantity
                 };
-                orderDetailsControl.UpdateTotalPrice();
+                orderDetailsControl.UpdateTotalPrice(true);
 
                 // Invoke the callback to pass the order to the main form
                 onOrder?.Invoke(orderDetailsControl);
@@ -137,8 +202,26 @@ namespace RestaurantSystem.UI
             }
         }
 
+        private byte[] ImageToByteArray(Image imageIn)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                imageIn.Save(ms, ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
 
         private void itemDescription_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listIngredients_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void itemName_Click(object sender, EventArgs e)
         {
 
         }

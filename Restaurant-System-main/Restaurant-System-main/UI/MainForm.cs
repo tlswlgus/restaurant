@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -16,6 +18,8 @@ namespace RestaurantSystem.UI
     {
         private readonly MenuEventHandler _menuButtonHandler;
         private List<OrderDetailsControl> orderedItemControls = new List<OrderDetailsControl>();
+        decimal totalAmount = 0;
+        Boolean dineIn;
 
         public FlowLayoutPanel OrderDetailsPanel => flpOrderDetails;
         public MainForm()
@@ -109,11 +113,6 @@ namespace RestaurantSystem.UI
             e.Graphics.DrawLine(pen, startPoint, endPoint);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pnlAmount_Paint(object sender, PaintEventArgs e)
         {
             int penSize = 4;
@@ -129,5 +128,62 @@ namespace RestaurantSystem.UI
 
         }
 
+        public void AddTotalAmount(decimal price)
+        {
+            totalAmount = Convert.ToDecimal(lblTotalAmount.Text.Replace("₱ ", "").Trim()) + price;
+            lblTotalAmount.Text = $"₱ {totalAmount:0.00}";
+        }
+
+        public void getDineIn(Boolean dine) { 
+            dineIn = dine;
+        }
+
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            var checkout = new Checkout();
+            checkout.ShowDialog();
+        }
+
+        private void lblTotalAmount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text.Trim();
+            var launch = new Launch();
+
+            _menuButtonHandler.LoadMenuItems("All", searchTerm);
+            totalAmount = 0;
+            lblTotalAmount.Text = "₱ 00.00";
+            flpOrderDetails.Controls.Clear();
+            string connectionString = "Server=jihyeon\\SQLEXPRESS01;Database=RestaurantDB;Trusted_Connection=True;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string truncateQuery = "TRUNCATE TABLE Orders";
+                    using (SqlCommand command = new SqlCommand(truncateQuery, connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            launch.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

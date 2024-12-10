@@ -8,5 +8,6 @@ namespace RestaurantSystem.Models
 {
     internal class Order
     {
+        
     }
 }

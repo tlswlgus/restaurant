@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,6 @@ namespace RestaurantSystem.UI
 {
     public partial class Launch : Form
     {
-        Boolean dineIn;
         int outerBorder = 35;
         public Launch()
         {
@@ -125,13 +125,21 @@ namespace RestaurantSystem.UI
 
         private void btnDine_Click(object sender, EventArgs e)
         {
-            dineIn = true;
+            var mainFrom = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
+            if (mainFrom != null)
+            {
+                mainFrom.getDineIn(true);
+            }           
             Close();
         }
 
         private void btnTake_Click(object sender, EventArgs e)
         {
-            dineIn = false;
+            var mainFrom = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
+            if (mainFrom != null)
+            {
+                mainFrom.getDineIn(false);
+            }
             Close();
         }
     }
