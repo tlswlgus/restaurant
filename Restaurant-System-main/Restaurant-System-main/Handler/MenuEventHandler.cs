@@ -86,7 +86,7 @@ namespace RestaurantSystem.Handler
             {
                 // Update the quantity and total price
                 existingOrder.Quantity += orderDetails.Quantity;
-                existingOrder.UpdateTotalPrice(false);
+                existingOrder.UpdateTotalPrice();
             }
             else
             {

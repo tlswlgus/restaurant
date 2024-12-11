@@ -57,3 +57,6 @@ C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\
 C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.pdb
 C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.Checkout.resources
 C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.Not_Available.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.DiscountForm.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.OrderComplete.resources
+C:\Users\jihye\OneDrive\Documents\Resto_Final\restaurant\Restaurant-System-main\Restaurant-System-main\obj\Debug\RestaurantSystem.UI.Receipt.resources

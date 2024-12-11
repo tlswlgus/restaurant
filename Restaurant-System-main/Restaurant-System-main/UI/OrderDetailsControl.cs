@@ -2,22 +2,30 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using RestaurantSystem.Models;
+using RestaurantSystem.Utilities;
 
 namespace RestaurantSystem.UI
 {
     public partial class OrderDetailsControl : UserControl
     {
+        
         int oldQuantity;
         decimal price = 0, oldprice = 0;
-        public Image OrderImage
+        public byte[] OrderImage
         {
-            get => picOrder.Image;
-            set => picOrder.Image = value;
+            get;
+            set;
         }
 
         public string ItemName
@@ -34,30 +42,66 @@ namespace RestaurantSystem.UI
             set; 
         }
 
-
-        public void UpdateTotalPrice(Boolean calcu)
-        {
-
-            orderPrice.Text = $"₱ {Price} x {Quantity}";
-            orderTotalPrice.Text = $"₱ {Price * Quantity}";
-            if (calcu == true)
-            {
-                oldQuantity = Quantity;
-
-                price = (Price * Quantity) - oldprice;
-                System.Console.WriteLine(price);
-
-                var mainFrom = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
-                if (mainFrom != null)
-                {
-                    mainFrom.AddTotalAmount(price);
-                }
-
-                oldprice = price;
-            } 
-            
+        public decimal TotalPrice {
+            get; 
+            set;
         }
 
+        string connectionString = "Server=jihyeon\\SQLEXPRESS01;Database=RestaurantDB;Trusted_Connection=True;";
+
+
+        public void UpdateTotalPrice()
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM Orders WHERE OrderName = @OrderName";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@OrderName", ItemName);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                Price = Convert.ToDecimal(reader["OrderPrice"]);
+                                Quantity = Convert.ToInt32(reader["OrderQuantity"]);
+                                TotalPrice = Convert.ToDecimal(reader["OrderTotal"]);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Order not found.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+            orderPrice.Text = $"₱ {Price:0.00} x {Quantity}";
+            orderTotalPrice.Text = $"₱ {TotalPrice:0.00}";
+
+            var mainFrom = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
+            if (mainFrom != null)
+            {
+                mainFrom.AddTotalAmount();
+            }
+        }
+
+        private byte[] ImageToByteArray(Image imageIn)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                imageIn.Save(ms, ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
 
         public OrderDetailsControl()
         {
@@ -66,7 +110,42 @@ namespace RestaurantSystem.UI
 
         private void OrderDetailsControl_Load(object sender, EventArgs e)
         {
-           
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM Orders WHERE OrderName = @OrderName";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@OrderName", ItemName);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                Price = Convert.ToDecimal(reader["OrderPrice"]);
+                                OrderImage = reader["OrderImage"] as byte[];
+                                Quantity = Convert.ToInt32(reader["OrderQuantity"]);
+                                TotalPrice = Convert.ToDecimal(reader["OrderTotal"]);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Order not found.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            
+            picOrder.Image = ImageHelper.ByteArrayToImage(OrderImage);
+            orderPrice.Text = $"₱ {Price:0.00} x {Quantity}";
+            orderTotalPrice.Text = $"₱ {TotalPrice:0.00}";
         }
 
         private void OrderDetailsControl_Paint(object sender, PaintEventArgs e)
@@ -88,12 +167,41 @@ namespace RestaurantSystem.UI
 
         private void btnDelOrder_Click(object sender, EventArgs e)
         {
-            price = 0 - (Price * Quantity);
+            
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "DELETE FROM Orders WHERE OrderName = @OrderName";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@OrderName", ItemName);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected >= 0)
+                        {
+                            Console.WriteLine("Order deleted successfully.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Order not found.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
 
             var mainFrom = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
             if (mainFrom != null)
             {
-                mainFrom.AddTotalAmount(price);
+                mainFrom.AddTotalAmount();
             }
             this.Dispose();
         }

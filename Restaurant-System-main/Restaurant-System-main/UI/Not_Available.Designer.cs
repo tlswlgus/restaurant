@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lblSorry = new System.Windows.Forms.Label();
-            this.picSorry = new System.Windows.Forms.PictureBox();
-            this.btnOK = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lblNotAvail = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.picSorry = new System.Windows.Forms.PictureBox();
             this.pnlTop.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSorry)).BeginInit();
@@ -50,6 +50,18 @@
             this.pnlTop.Size = new System.Drawing.Size(796, 446);
             this.pnlTop.TabIndex = 0;
             // 
+            // lblSorry
+            // 
+            this.lblSorry.AutoSize = true;
+            this.lblSorry.Font = new System.Drawing.Font("Georgia", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSorry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(152)))), ((int)(((byte)(61)))));
+            this.lblSorry.Location = new System.Drawing.Point(308, 175);
+            this.lblSorry.Margin = new System.Windows.Forms.Padding(5);
+            this.lblSorry.Name = "lblSorry";
+            this.lblSorry.Size = new System.Drawing.Size(265, 41);
+            this.lblSorry.TabIndex = 2;
+            this.lblSorry.Text = "Order Complete";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(37)))));
@@ -60,27 +72,17 @@
             this.panel2.Size = new System.Drawing.Size(796, 223);
             this.panel2.TabIndex = 0;
             // 
-            // lblSorry
+            // lblNotAvail
             // 
-            this.lblSorry.AutoSize = true;
-            this.lblSorry.Font = new System.Drawing.Font("Georgia", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSorry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(152)))), ((int)(((byte)(61)))));
-            this.lblSorry.Location = new System.Drawing.Point(308, 175);
-            this.lblSorry.Margin = new System.Windows.Forms.Padding(5);
-            this.lblSorry.Name = "lblSorry";
-            this.lblSorry.Size = new System.Drawing.Size(152, 41);
-            this.lblSorry.TabIndex = 2;
-            this.lblSorry.Text = "Sorry.. :(";
-            // 
-            // picSorry
-            // 
-            this.picSorry.Image = global::RestaurantSystem.Properties.Resources.Test;
-            this.picSorry.Location = new System.Drawing.Point(303, 5);
-            this.picSorry.Name = "picSorry";
-            this.picSorry.Size = new System.Drawing.Size(162, 162);
-            this.picSorry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSorry.TabIndex = 3;
-            this.picSorry.TabStop = false;
+            this.lblNotAvail.AutoSize = true;
+            this.lblNotAvail.Font = new System.Drawing.Font("Georgia", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotAvail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(207)))), ((int)(((byte)(196)))));
+            this.lblNotAvail.Location = new System.Drawing.Point(160, 39);
+            this.lblNotAvail.Margin = new System.Windows.Forms.Padding(5);
+            this.lblNotAvail.Name = "lblNotAvail";
+            this.lblNotAvail.Size = new System.Drawing.Size(527, 41);
+            this.lblNotAvail.TabIndex = 4;
+            this.lblNotAvail.Text = "This Service is Not Available";
             // 
             // btnOK
             // 
@@ -98,17 +100,16 @@
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
             // 
-            // lblNotAvail
+            // picSorry
             // 
-            this.lblNotAvail.AutoSize = true;
-            this.lblNotAvail.Font = new System.Drawing.Font("Georgia", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotAvail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(207)))), ((int)(((byte)(196)))));
-            this.lblNotAvail.Location = new System.Drawing.Point(160, 39);
-            this.lblNotAvail.Margin = new System.Windows.Forms.Padding(5);
-            this.lblNotAvail.Name = "lblNotAvail";
-            this.lblNotAvail.Size = new System.Drawing.Size(454, 41);
-            this.lblNotAvail.TabIndex = 4;
-            this.lblNotAvail.Text = "This Service is Not Available";
+            this.picSorry.Image = global::RestaurantSystem.Properties.Resources._1;
+            this.picSorry.Location = new System.Drawing.Point(303, 12);
+            this.picSorry.Name = "picSorry";
+            this.picSorry.Size = new System.Drawing.Size(150, 150);
+            this.picSorry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSorry.TabIndex = 3;
+            this.picSorry.TabStop = false;
+            this.picSorry.Click += new System.EventHandler(this.picSorry_Click);
             // 
             // Not_Available
             // 

@@ -28,5 +28,10 @@ namespace RestaurantSystem.UI
             x = (int)((pnlTop.Width - lblNotAvail.Width) * 0.5);
             lblNotAvail.Left = x;
         }
+
+        private void picSorry_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

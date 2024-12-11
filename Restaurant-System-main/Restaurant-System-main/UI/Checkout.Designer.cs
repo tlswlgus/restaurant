@@ -29,20 +29,30 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtNumber = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.picUser = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlPayment = new System.Windows.Forms.Panel();
             this.pnlWallet = new System.Windows.Forms.Panel();
+            this.chkWallet = new System.Windows.Forms.CheckBox();
+            this.picEWallet = new System.Windows.Forms.PictureBox();
             this.lblWallet = new System.Windows.Forms.Label();
             this.pnlCredit = new System.Windows.Forms.Panel();
+            this.chkCredit = new System.Windows.Forms.CheckBox();
+            this.picCredit = new System.Windows.Forms.PictureBox();
             this.lblCredit = new System.Windows.Forms.Label();
             this.pnlCash = new System.Windows.Forms.Panel();
+            this.chkCash = new System.Windows.Forms.CheckBox();
+            this.picCash = new System.Windows.Forms.PictureBox();
             this.lblCash = new System.Windows.Forms.Label();
+            this.picPayment = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pnlTotalAmount = new System.Windows.Forms.Panel();
             this.btnConfirm = new System.Windows.Forms.Button();
@@ -53,34 +63,29 @@
             this.lblLabelTotal = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.picTotal = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.picTotal = new System.Windows.Forms.PictureBox();
-            this.picEWallet = new System.Windows.Forms.PictureBox();
-            this.picCredit = new System.Windows.Forms.PictureBox();
-            this.picCash = new System.Windows.Forms.PictureBox();
-            this.picPayment = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picUser = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.pnlPayment.SuspendLayout();
             this.pnlWallet.SuspendLayout();
-            this.pnlCredit.SuspendLayout();
-            this.pnlCash.SuspendLayout();
-            this.pnlTotalAmount.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEWallet)).BeginInit();
+            this.pnlCredit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCredit)).BeginInit();
+            this.pnlCash.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCash)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPayment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
+            this.pnlTotalAmount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTotal)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(56)))));
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(2, 2);
@@ -88,6 +93,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(596, 100);
             this.panel1.TabIndex = 2;
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(152)))), ((int)(((byte)(61)))));
+            this.btnClose.Location = new System.Drawing.Point(543, -10);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(58, 63);
+            this.btnClose.TabIndex = 16;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label1
             // 
@@ -99,6 +118,17 @@
             this.label1.Size = new System.Drawing.Size(163, 41);
             this.label1.TabIndex = 1;
             this.label1.Text = "Checkout";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RestaurantSystem.Properties.Resources.restaurant_logo_transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(94, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -126,6 +156,7 @@
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(414, 29);
             this.txtNumber.TabIndex = 7;
+            this.txtNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumber_KeyPress);
             // 
             // txtName
             // 
@@ -150,6 +181,16 @@
             this.label4.Size = new System.Drawing.Size(158, 23);
             this.label4.TabIndex = 5;
             this.label4.Text = "Contact Number:";
+            // 
+            // picUser
+            // 
+            this.picUser.Image = global::RestaurantSystem.Properties.Resources.User;
+            this.picUser.Location = new System.Drawing.Point(10, 5);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(50, 50);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUser.TabIndex = 4;
+            this.picUser.TabStop = false;
             // 
             // label3
             // 
@@ -185,18 +226,41 @@
             this.pnlPayment.Location = new System.Drawing.Point(2, 244);
             this.pnlPayment.Margin = new System.Windows.Forms.Padding(2, 1, 2, 2);
             this.pnlPayment.Name = "pnlPayment";
-            this.pnlPayment.Size = new System.Drawing.Size(596, 207);
+            this.pnlPayment.Size = new System.Drawing.Size(596, 218);
             this.pnlPayment.TabIndex = 8;
             // 
             // pnlWallet
             // 
+            this.pnlWallet.Controls.Add(this.chkWallet);
             this.pnlWallet.Controls.Add(this.picEWallet);
             this.pnlWallet.Controls.Add(this.lblWallet);
             this.pnlWallet.Location = new System.Drawing.Point(442, 65);
             this.pnlWallet.Name = "pnlWallet";
-            this.pnlWallet.Size = new System.Drawing.Size(106, 130);
+            this.pnlWallet.Size = new System.Drawing.Size(106, 149);
             this.pnlWallet.TabIndex = 15;
             this.pnlWallet.Click += new System.EventHandler(this.pnlWallet_Click);
+            // 
+            // chkWallet
+            // 
+            this.chkWallet.AutoSize = true;
+            this.chkWallet.Location = new System.Drawing.Point(46, 131);
+            this.chkWallet.Name = "chkWallet";
+            this.chkWallet.Size = new System.Drawing.Size(15, 14);
+            this.chkWallet.TabIndex = 13;
+            this.chkWallet.UseVisualStyleBackColor = true;
+            this.chkWallet.CheckedChanged += new System.EventHandler(this.chkWallet_CheckedChanged);
+            this.chkWallet.Click += new System.EventHandler(this.pnlWallet_Click);
+            // 
+            // picEWallet
+            // 
+            this.picEWallet.Image = global::RestaurantSystem.Properties.Resources.E_Wallet;
+            this.picEWallet.Location = new System.Drawing.Point(3, 3);
+            this.picEWallet.Name = "picEWallet";
+            this.picEWallet.Size = new System.Drawing.Size(100, 100);
+            this.picEWallet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picEWallet.TabIndex = 11;
+            this.picEWallet.TabStop = false;
+            this.picEWallet.Click += new System.EventHandler(this.pnlWallet_Click);
             // 
             // lblWallet
             // 
@@ -209,16 +273,40 @@
             this.lblWallet.Size = new System.Drawing.Size(84, 23);
             this.lblWallet.TabIndex = 12;
             this.lblWallet.Text = "E-Wallet";
+            this.lblWallet.Click += new System.EventHandler(this.pnlWallet_Click);
             // 
             // pnlCredit
             // 
+            this.pnlCredit.Controls.Add(this.chkCredit);
             this.pnlCredit.Controls.Add(this.picCredit);
             this.pnlCredit.Controls.Add(this.lblCredit);
             this.pnlCredit.Location = new System.Drawing.Point(242, 65);
             this.pnlCredit.Name = "pnlCredit";
-            this.pnlCredit.Size = new System.Drawing.Size(106, 130);
+            this.pnlCredit.Size = new System.Drawing.Size(106, 149);
             this.pnlCredit.TabIndex = 14;
             this.pnlCredit.Click += new System.EventHandler(this.pnlCredit_Click);
+            // 
+            // chkCredit
+            // 
+            this.chkCredit.AutoSize = true;
+            this.chkCredit.Location = new System.Drawing.Point(46, 131);
+            this.chkCredit.Name = "chkCredit";
+            this.chkCredit.Size = new System.Drawing.Size(15, 14);
+            this.chkCredit.TabIndex = 11;
+            this.chkCredit.UseVisualStyleBackColor = true;
+            this.chkCredit.CheckedChanged += new System.EventHandler(this.chkCredit_CheckedChanged);
+            this.chkCredit.Click += new System.EventHandler(this.pnlCredit_Click);
+            // 
+            // picCredit
+            // 
+            this.picCredit.Image = global::RestaurantSystem.Properties.Resources.Credit;
+            this.picCredit.Location = new System.Drawing.Point(3, 3);
+            this.picCredit.Name = "picCredit";
+            this.picCredit.Size = new System.Drawing.Size(100, 100);
+            this.picCredit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCredit.TabIndex = 9;
+            this.picCredit.TabStop = false;
+            this.picCredit.Click += new System.EventHandler(this.pnlCredit_Click);
             // 
             // lblCredit
             // 
@@ -235,12 +323,36 @@
             // 
             // pnlCash
             // 
+            this.pnlCash.Controls.Add(this.chkCash);
             this.pnlCash.Controls.Add(this.picCash);
             this.pnlCash.Controls.Add(this.lblCash);
             this.pnlCash.Location = new System.Drawing.Point(70, 65);
             this.pnlCash.Name = "pnlCash";
-            this.pnlCash.Size = new System.Drawing.Size(106, 130);
+            this.pnlCash.Size = new System.Drawing.Size(106, 149);
             this.pnlCash.TabIndex = 13;
+            this.pnlCash.Click += new System.EventHandler(this.pnlCash_Click);
+            this.pnlCash.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCash_Paint);
+            // 
+            // chkCash
+            // 
+            this.chkCash.AutoSize = true;
+            this.chkCash.Location = new System.Drawing.Point(45, 131);
+            this.chkCash.Name = "chkCash";
+            this.chkCash.Size = new System.Drawing.Size(15, 14);
+            this.chkCash.TabIndex = 9;
+            this.chkCash.UseVisualStyleBackColor = true;
+            this.chkCash.CheckedChanged += new System.EventHandler(this.chkCash_CheckedChanged);
+            // 
+            // picCash
+            // 
+            this.picCash.Image = global::RestaurantSystem.Properties.Resources.Cash;
+            this.picCash.Location = new System.Drawing.Point(3, 3);
+            this.picCash.Name = "picCash";
+            this.picCash.Size = new System.Drawing.Size(100, 100);
+            this.picCash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCash.TabIndex = 5;
+            this.picCash.TabStop = false;
+            this.picCash.Click += new System.EventHandler(this.pnlCash_Click);
             // 
             // lblCash
             // 
@@ -253,13 +365,24 @@
             this.lblCash.Size = new System.Drawing.Size(51, 23);
             this.lblCash.TabIndex = 8;
             this.lblCash.Text = "Cash";
+            this.lblCash.Click += new System.EventHandler(this.pnlCash_Click);
+            // 
+            // picPayment
+            // 
+            this.picPayment.Image = global::RestaurantSystem.Properties.Resources.Payment;
+            this.picPayment.Location = new System.Drawing.Point(10, 5);
+            this.picPayment.Name = "picPayment";
+            this.picPayment.Size = new System.Drawing.Size(50, 50);
+            this.picPayment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPayment.TabIndex = 4;
+            this.picPayment.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(152)))), ((int)(((byte)(61)))));
-            this.label7.Location = new System.Drawing.Point(66, 26);
+            this.label7.Location = new System.Drawing.Point(66, 17);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(187, 29);
             this.label7.TabIndex = 2;
@@ -279,7 +402,7 @@
             this.pnlTotalAmount.Controls.Add(this.picTotal);
             this.pnlTotalAmount.Controls.Add(this.label10);
             this.pnlTotalAmount.Controls.Add(this.label11);
-            this.pnlTotalAmount.Location = new System.Drawing.Point(2, 452);
+            this.pnlTotalAmount.Location = new System.Drawing.Point(2, 463);
             this.pnlTotalAmount.Margin = new System.Windows.Forms.Padding(2, 1, 2, 2);
             this.pnlTotalAmount.Name = "pnlTotalAmount";
             this.pnlTotalAmount.Size = new System.Drawing.Size(596, 240);
@@ -304,55 +427,52 @@
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // lblSubtotal
             // 
-            this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(207)))), ((int)(((byte)(196)))));
-            this.lblSubtotal.Location = new System.Drawing.Point(508, 68);
+            this.lblSubtotal.Location = new System.Drawing.Point(220, 68);
             this.lblSubtotal.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(79, 23);
+            this.lblSubtotal.Size = new System.Drawing.Size(367, 23);
             this.lblSubtotal.TabIndex = 11;
             this.lblSubtotal.Text = "₱ 00.00";
-            this.lblSubtotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSubtotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblVAT
             // 
-            this.lblVAT.AutoSize = true;
             this.lblVAT.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVAT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(207)))), ((int)(((byte)(196)))));
-            this.lblVAT.Location = new System.Drawing.Point(508, 96);
+            this.lblVAT.Location = new System.Drawing.Point(220, 96);
             this.lblVAT.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lblVAT.Name = "lblVAT";
-            this.lblVAT.Size = new System.Drawing.Size(79, 23);
+            this.lblVAT.Size = new System.Drawing.Size(367, 23);
             this.lblVAT.TabIndex = 10;
             this.lblVAT.Text = "₱ 00.00";
-            this.lblVAT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblVAT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblDiscount
             // 
-            this.lblDiscount.AutoSize = true;
             this.lblDiscount.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(207)))), ((int)(((byte)(196)))));
-            this.lblDiscount.Location = new System.Drawing.Point(496, 124);
+            this.lblDiscount.Location = new System.Drawing.Point(208, 124);
             this.lblDiscount.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(91, 23);
+            this.lblDiscount.Size = new System.Drawing.Size(379, 23);
             this.lblDiscount.TabIndex = 9;
             this.lblDiscount.Text = "- ₱ 00.00";
-            this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTotal
             // 
-            this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(207)))), ((int)(((byte)(196)))));
-            this.lblTotal.Location = new System.Drawing.Point(502, 165);
+            this.lblTotal.Location = new System.Drawing.Point(214, 165);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(85, 23);
+            this.lblTotal.Size = new System.Drawing.Size(373, 23);
             this.lblTotal.TabIndex = 8;
             this.lblTotal.Text = "₱ 00.00";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -396,6 +516,16 @@
             this.label9.Text = "Tax";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // picTotal
+            // 
+            this.picTotal.Image = global::RestaurantSystem.Properties.Resources.Amount;
+            this.picTotal.Location = new System.Drawing.Point(10, 5);
+            this.picTotal.Name = "picTotal";
+            this.picTotal.Size = new System.Drawing.Size(50, 50);
+            this.picTotal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTotal.TabIndex = 4;
+            this.picTotal.TabStop = false;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -413,90 +543,18 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(152)))), ((int)(((byte)(61)))));
-            this.label11.Location = new System.Drawing.Point(66, 26);
+            this.label11.Location = new System.Drawing.Point(66, 16);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(160, 29);
             this.label11.TabIndex = 2;
             this.label11.Text = "Total Amount";
-            // 
-            // picTotal
-            // 
-            this.picTotal.Image = global::RestaurantSystem.Properties.Resources.Amount;
-            this.picTotal.Location = new System.Drawing.Point(10, 5);
-            this.picTotal.Name = "picTotal";
-            this.picTotal.Size = new System.Drawing.Size(50, 50);
-            this.picTotal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTotal.TabIndex = 4;
-            this.picTotal.TabStop = false;
-            // 
-            // picEWallet
-            // 
-            this.picEWallet.Image = global::RestaurantSystem.Properties.Resources.E_Wallet;
-            this.picEWallet.Location = new System.Drawing.Point(3, 3);
-            this.picEWallet.Name = "picEWallet";
-            this.picEWallet.Size = new System.Drawing.Size(100, 100);
-            this.picEWallet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picEWallet.TabIndex = 11;
-            this.picEWallet.TabStop = false;
-            // 
-            // picCredit
-            // 
-            this.picCredit.Image = global::RestaurantSystem.Properties.Resources.Credit;
-            this.picCredit.Location = new System.Drawing.Point(3, 3);
-            this.picCredit.Name = "picCredit";
-            this.picCredit.Size = new System.Drawing.Size(100, 100);
-            this.picCredit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCredit.TabIndex = 9;
-            this.picCredit.TabStop = false;
-            this.picCredit.Click += new System.EventHandler(this.pnlCredit_Click);
-            // 
-            // picCash
-            // 
-            this.picCash.Image = global::RestaurantSystem.Properties.Resources.Cash;
-            this.picCash.Location = new System.Drawing.Point(3, 3);
-            this.picCash.Name = "picCash";
-            this.picCash.Size = new System.Drawing.Size(100, 100);
-            this.picCash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCash.TabIndex = 5;
-            this.picCash.TabStop = false;
-            // 
-            // picPayment
-            // 
-            this.picPayment.Image = global::RestaurantSystem.Properties.Resources.Payment;
-            this.picPayment.Location = new System.Drawing.Point(10, 5);
-            this.picPayment.Name = "picPayment";
-            this.picPayment.Size = new System.Drawing.Size(50, 50);
-            this.picPayment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPayment.TabIndex = 4;
-            this.picPayment.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RestaurantSystem.Properties.Resources.restaurant_logo_transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // picUser
-            // 
-            this.picUser.Image = global::RestaurantSystem.Properties.Resources.User;
-            this.picUser.Location = new System.Drawing.Point(10, 5);
-            this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(50, 50);
-            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUser.TabIndex = 4;
-            this.picUser.TabStop = false;
             // 
             // Checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(152)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(600, 693);
+            this.ClientSize = new System.Drawing.Size(600, 705);
             this.Controls.Add(this.pnlTotalAmount);
             this.Controls.Add(this.pnlPayment);
             this.Controls.Add(this.panel1);
@@ -508,25 +566,25 @@
             this.Load += new System.EventHandler(this.Checkout_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.pnlPayment.ResumeLayout(false);
             this.pnlPayment.PerformLayout();
             this.pnlWallet.ResumeLayout(false);
             this.pnlWallet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEWallet)).EndInit();
             this.pnlCredit.ResumeLayout(false);
             this.pnlCredit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCredit)).EndInit();
             this.pnlCash.ResumeLayout(false);
             this.pnlCash.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCash)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPayment)).EndInit();
             this.pnlTotalAmount.ResumeLayout(false);
             this.pnlTotalAmount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTotal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEWallet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCredit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCash)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPayment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -567,5 +625,9 @@
         private System.Windows.Forms.Panel pnlWallet;
         private System.Windows.Forms.Panel pnlCredit;
         private System.Windows.Forms.Panel pnlCash;
+        private System.Windows.Forms.CheckBox chkWallet;
+        private System.Windows.Forms.CheckBox chkCredit;
+        private System.Windows.Forms.CheckBox chkCash;
+        private System.Windows.Forms.Button btnClose;
     }
 }

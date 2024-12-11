@@ -8,6 +8,8 @@ namespace RestaurantSystem.Models
 {
     internal class Order
     {
-        
+        public string OrderName { get; set; }
+        public int OrderQuantity { get; set; }
+        public decimal OrderTotal { get; set; }
     }
 }

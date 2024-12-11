@@ -50,7 +50,7 @@ namespace RestaurantSystem.UI
            set => itemImage.Image = value;
         }
 
-        int oldQuantity = 0;
+        int oldQuantity;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -125,72 +125,90 @@ namespace RestaurantSystem.UI
             int quantity = int.Parse(lblQuantity.Text); // Get the quantity selected by the user
             quantity = oldQuantity + quantity;
             string connectionString = "Server=jihyeon\\SQLEXPRESS01;Database=RestaurantDB;Trusted_Connection=True;";
-            Console.WriteLine("Before product inserted. " + quantity + " " + oldQuantity);
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string checkQuery = "SELECT COUNT(*) FROM Orders WHERE OrderName = @OrderName";
-                    byte[] imageBytes = ImageToByteArray(ItemImage);
-                    using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection))
-                    {
-                        checkCommand.Parameters.AddWithValue("OrderName", ItemNameDetails);
-                        int count = (int)checkCommand.ExecuteScalar();
-                        if (count == 0)
-                        {
-                            // Insert new product
-                            string insertQuery = "INSERT INTO Orders (OrderName, OrderPrice, OrderImage, OrderQuantity, OrderTotal) VALUES (@OrderName, @OrderPrice, @OrderImage, @OrderQuantity, @OrderTotal)";
-                            using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
-                            {
-                                insertCommand.Parameters.AddWithValue("@OrderName", ItemNameDetails);
-                                insertCommand.Parameters.AddWithValue("@OrderPrice", ItemPriceDetails);
-                                insertCommand.Parameters.AddWithValue("@OrderImage", imageBytes);
-                                insertCommand.Parameters.AddWithValue("@OrderQuantity", quantity);
-                                insertCommand.Parameters.AddWithValue("@OrderTotal", ItemPriceDetails * quantity);
-                                insertCommand.ExecuteNonQuery();
-
-                                oldQuantity = quantity;
-                                Console.WriteLine("New product inserted. " + quantity + " " + oldQuantity);
-                            }
-                        }
-                        else
-                        {
-                            // Update existing product
-                            string updateQuery = "UPDATE Orders SET  OrderPrice = @OrderPrice, OrderImage = @OrderImage, OrderQuantity = @OrderQuantity, OrderTotal = @OrderTotal  WHERE OrderName = '" + ItemNameDetails + "'";
-                            using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
-                            {
-                                quantity = oldQuantity + quantity;
-                                updateCommand.Parameters.AddWithValue("@OrderPrice", ItemPriceDetails);
-                                updateCommand.Parameters.AddWithValue("@OrderImage", imageBytes);
-                                updateCommand.Parameters.AddWithValue("@OrderQuantity", quantity);
-                                updateCommand.Parameters.AddWithValue("@OrderTotal", ItemPriceDetails * quantity);
-                                updateCommand.ExecuteNonQuery();
-
-                                oldQuantity = quantity;
-                                Console.WriteLine("Existing product updated." + quantity + " " + oldQuantity);
-                            }
-                        }
-                    }
-
-                }
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
             
             if (quantity > 0)
             {
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        string checkQuery = "SELECT COUNT(*) FROM Orders WHERE OrderName = @OrderName";
+                        byte[] imageBytes = ImageToByteArray(ItemImage);
+                        using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection))
+                        {
+                            checkCommand.Parameters.AddWithValue("OrderName", ItemNameDetails);
+                            int count = (int)checkCommand.ExecuteScalar();
+                            if (count == 0)
+                            {
+                                // Insert new product
+                                string insertQuery = "INSERT INTO Orders (OrderName, OrderPrice, OrderImage, OrderQuantity, OrderTotal) VALUES (@OrderName, @OrderPrice, @OrderImage, @OrderQuantity, @OrderTotal)";
+                                using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
+                                {
+                                    insertCommand.Parameters.AddWithValue("@OrderName", ItemNameDetails);
+                                    insertCommand.Parameters.AddWithValue("@OrderPrice", ItemPriceDetails);
+                                    insertCommand.Parameters.AddWithValue("@OrderImage", imageBytes);
+                                    insertCommand.Parameters.AddWithValue("@OrderQuantity", quantity);
+                                    insertCommand.Parameters.AddWithValue("@OrderTotal", ItemPriceDetails * quantity);
+                                    insertCommand.ExecuteNonQuery();
+
+                                    oldQuantity = quantity;
+
+                                }
+                            }
+                            else
+                            {
+                                string query = "SELECT OrderQuantity FROM Orders WHERE OrderName = @OrderName";
+
+                                using (SqlCommand command = new SqlCommand(query, connection))
+                                {
+                                    command.Parameters.AddWithValue("@OrderName", ItemNameDetails);
+
+                                    using (SqlDataReader reader = command.ExecuteReader())
+                                    {
+                                        if (reader.Read())
+                                        {
+                                            oldQuantity = Convert.ToInt32(reader["OrderQuantity"]);
+                                            Console.WriteLine("Order Quantity: " + oldQuantity);
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("Order not found.");
+                                        }
+                                    }
+                                }
+
+                                // Update existing product
+                                string updateQuery = "UPDATE Orders SET  OrderPrice = @OrderPrice, OrderImage = @OrderImage, OrderQuantity = @OrderQuantity, OrderTotal = @OrderTotal  WHERE OrderName = '" + ItemNameDetails + "'";
+                                using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
+                                {
+                                    updateCommand.Parameters.AddWithValue("@OrderPrice", ItemPriceDetails);
+                                    updateCommand.Parameters.AddWithValue("@OrderImage", imageBytes);
+                                    updateCommand.Parameters.AddWithValue("@OrderQuantity", quantity += oldQuantity);
+                                    updateCommand.Parameters.AddWithValue("@OrderTotal", ItemPriceDetails * quantity);
+                                    updateCommand.ExecuteNonQuery();
+
+                                    oldQuantity = quantity;
+                                }
+                            }
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+
                 // Create an OrderDetailsControl with the selected details
                 var orderDetailsControl = new OrderDetailsControl
                 {
-                    OrderImage = ItemImage,
+                    //rderImage = ItemImage,
                     ItemName = ItemNameDetails,
-                    Price = ItemPriceDetails,
-                    Quantity = quantity
+                    //Price = ItemPriceDetails,
+                    //Quantity = quantity
                 };
-                orderDetailsControl.UpdateTotalPrice(true);
+                orderDetailsControl.UpdateTotalPrice();
 
                 // Invoke the callback to pass the order to the main form
                 onOrder?.Invoke(orderDetailsControl);

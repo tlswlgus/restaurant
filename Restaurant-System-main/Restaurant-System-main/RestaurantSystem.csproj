@@ -61,6 +61,12 @@
     <Compile Include="UI\Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\DiscountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DiscountForm.Designer.cs">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Launch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +104,23 @@
     <Compile Include="UI\Not_Available.Designer.cs">
       <DependentUpon>Not_Available.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\OrderComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OrderComplete.Designer.cs">
+      <DependentUpon>OrderComplete.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\OrderDetailsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\OrderDetailsControl.Designer.cs">
       <DependentUpon>OrderDetailsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ImageHelper.cs" />
     <EmbeddedResource Include="UI\CategoryButtonControl.resx">
@@ -110,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Checkout.resx">
       <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DiscountForm.resx">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Launch.resx">
       <DependentUpon>Launch.cs</DependentUpon>
@@ -136,8 +157,14 @@
     <EmbeddedResource Include="UI\Not_Available.resx">
       <DependentUpon>Not_Available.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrderComplete.resx">
+      <DependentUpon>OrderComplete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\OrderDetailsControl.resx">
       <DependentUpon>OrderDetailsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -205,6 +232,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Amount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

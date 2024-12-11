@@ -20,7 +20,8 @@ namespace RestaurantSystem.UI
         private List<OrderDetailsControl> orderedItemControls = new List<OrderDetailsControl>();
         decimal totalAmount = 0;
         Boolean dineIn;
-
+        decimal totalOrderAmount;
+        string connectionString = "Server=jihyeon\\SQLEXPRESS01;Database=RestaurantDB;Trusted_Connection=True;";
         public FlowLayoutPanel OrderDetailsPanel => flpOrderDetails;
         public MainForm()
         {
@@ -30,8 +31,67 @@ namespace RestaurantSystem.UI
             _menuButtonHandler = new MenuEventHandler(databaseHandler, flpMenuItem, flpOrderDetails);
 
         }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
+            string searchTerm = txtSearch.Text.Trim();
+            totalAmount = 0;
+            lblTotalAmount.Text = "₱ 00.00";
+            flpOrderDetails.Controls.Clear();
+            string connectionString = "Server=jihyeon\\SQLEXPRESS01;Database=RestaurantDB;Trusted_Connection=True;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string truncateQuery = "TRUNCATE TABLE Orders";
+                    using (SqlCommand command = new SqlCommand(truncateQuery, connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = @"
+                UPDATE Customers
+                SET 
+                    Name = NULL,
+                    ContactNumber = NULL,
+                    PaymentOption = NULL,
+                    Discount = NULL,
+                    IsPWD = NULL,
+                    IsSeniorCitizen = NULL,
+                    Subtotal = NULL,
+                    Tax = NULL,
+                    Total = NULL,
+                    DineIn = NULL
+                WHERE CustomerID = 1;";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        Console.WriteLine(rowsAffected + " rows updated.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
             var launch = new Launch();
             _menuButtonHandler.LoadMenuItems();
             launch.ShowDialog();
@@ -128,10 +188,38 @@ namespace RestaurantSystem.UI
 
         }
 
-        public void AddTotalAmount(decimal price)
+        public void AddTotalAmount()
         {
-            totalAmount = Convert.ToDecimal(lblTotalAmount.Text.Replace("₱ ", "").Trim()) + price;
-            lblTotalAmount.Text = $"₱ {totalAmount:0.00}";
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "SELECT COALESCE(SUM(OrderTotal), 0) AS TotalOrderAmount FROM Orders;";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                totalOrderAmount = reader.GetDecimal(0);
+                                lblTotalAmount.Text = $"₱ {totalOrderAmount:0.00}";
+                                Console.WriteLine("Total Order Amount: " + totalOrderAmount);
+                            }
+                            else
+                            {
+                                Console.WriteLine("No data found.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
 
         public void getDineIn(Boolean dine) { 
@@ -141,8 +229,54 @@ namespace RestaurantSystem.UI
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
-            var checkout = new Checkout();
-            checkout.ShowDialog();
+            if (totalOrderAmount > 0)
+            {
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        string query = "UPDATE Customers SET Subtotal = @NewSubtotal WHERE CustomerID = 1";
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@NewSubtotal", totalOrderAmount);
+
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                Console.WriteLine("Subtotal updated successfully for CustomerID = 1");
+                            }
+                            else
+                            {
+                                Console.WriteLine("No customer found with CustomerID = 1");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+
+                var checkout = new Checkout();
+                checkout.ShowDialog();
+                checkout = Application.OpenForms.OfType<Checkout>().FirstOrDefault();
+                if (checkout != null)
+                {
+                    checkout.getTotal();
+                }
+                
+
+
+            }
+            else
+            {
+                MessageBox.Show("Please select your order.", "No Order(s) Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void lblTotalAmount_Click(object sender, EventArgs e)
@@ -178,12 +312,49 @@ namespace RestaurantSystem.UI
             {
                 Console.WriteLine("Error: " + ex.Message);
             }
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = @"
+                UPDATE Customers
+                SET 
+                    Name = NULL,
+                    ContactNumber = NULL,
+                    PaymentOption = NULL,
+                    Discount = NULL,
+                    IsPWD = NULL,
+                    IsSeniorCitizen = NULL,
+                    Subtotal = NULL,
+                    Tax = NULL,
+                    Total = NULL,
+                    DineIn = NULL
+                WHERE CustomerID = 1;";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        Console.WriteLine(rowsAffected + " rows updated.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
             launch.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            var discountFrom = new DiscountForm();
+            discountFrom.ShowDialog();
         }
     }
 }

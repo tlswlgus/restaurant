@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace RestaurantSystem.UI
 {
     public partial class Launch : Form
     {
+        string connectionString = "Server=jihyeon\\SQLEXPRESS01;Database=RestaurantDB;Trusted_Connection=True;";
         int outerBorder = 35;
         public Launch()
         {
@@ -125,22 +127,38 @@ namespace RestaurantSystem.UI
 
         private void btnDine_Click(object sender, EventArgs e)
         {
-            var mainFrom = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
-            if (mainFrom != null)
+            string sql = "UPDATE Customers SET DineIn = @DineIn";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                mainFrom.getDineIn(true);
-            }           
-            Close();
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@DineIn", true);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    this.Close();
+                    Console.WriteLine($"True Dine");
+                }
+            }
         }
 
         private void btnTake_Click(object sender, EventArgs e)
         {
-            var mainFrom = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
-            if (mainFrom != null)
+            string sql = "UPDATE Customers SET DineIn = @DineIn";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                mainFrom.getDineIn(false);
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@DineIn", false);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    this.Close();
+                    Console.WriteLine($"True Dine");
+                }
             }
-            Close();
         }
     }
 }
